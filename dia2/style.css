@@ -1,0 +1,38 @@
+h1{
+    color: orange;   
+    font-size: 65px; 
+    font-family: sans-serif;
+}
+
+ul {
+    background-color: blue;
+    color: white;
+}
+.cor-de-fundo{
+    background-color: brown;
+}
+
+p {
+    font-weight: 600;
+    color: white;
+    font-size: 3em;
+}
+
+body {
+    font-size: 16px;
+    font-style: oblique;
+    line-height: 5em;
+    text-align: center
+}
+
+#vermelha {
+    background-color: red;
+}
+
+#amarela {
+    background-color: yellow;
+}
+
+#rosa {
+    background-color: pink;
+}
