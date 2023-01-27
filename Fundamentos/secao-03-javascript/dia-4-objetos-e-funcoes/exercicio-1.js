@@ -12,3 +12,28 @@ player.bestInTheWorld = [2006, 2007, 2008, 2009, 2010, 2018];
 console.table(player);
 
 console.log('A jogadora ' + player['pessoa'] + ' ' + player['lastPessoa'] + ' foi eleita a melhor do mundo por ' + player['bestInTheWorld'].length + ' vezes.');
+
+
+let names = {
+    person1: 'João',
+    person2: 'Maria',
+    person3: 'Jorge',
+}
+
+    for (let index in names) {
+
+    console.log('Olá', names[index])
+  };
+
+  let car = {
+    model: 'A3 Sedan',
+    manufacturer: 'Audi',
+    year: 2020
+  };
+
+  for (let index in car) {
+
+    console.log(index,car[index])
+  }
+
+  
