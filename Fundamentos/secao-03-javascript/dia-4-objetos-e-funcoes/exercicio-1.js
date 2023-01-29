@@ -1,39 +1,84 @@
-let player = {
-   pessoa :'Marta',
-    lastPessoa : 'Silva',
-    age : 34,
-    medals : { golden: 2, silver: 3 },
-}
+    //Exercício 1
+    
+    // Dando Boas vindas ao personagem:
+    let info = {
+        personagem: 'Margarida',
+        origem: 'Pato Donald',
+        nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+        };
+        
+    console.log('Bem-vinda, ', info.personagem)
 
-console.log('A jogadora ' + player.pessoa + ' ' + player.lastPessoa + ' tem ' + player.age + ' de idade.');
+    //Inserindo uma informção:
 
-player.bestInTheWorld = [2006, 2007, 2008, 2009, 2010, 2018];
+        info['recorrente'] = 'sim'
+    console.log(info);
 
-console.table(player);
+    //Imprimindo no console as chaves:
 
-console.log('A jogadora ' + player['pessoa'] + ' ' + player['lastPessoa'] + ' foi eleita a melhor do mundo por ' + player['bestInTheWorld'].length + ' vezes.');
+     for(let key in info) {
+        console.log(key);
+       }
 
+    // Imprimindo no console o valor das chaves:
 
-let names = {
-    person1: 'João',
-    person2: 'Maria',
-    person3: 'Jorge',
-}
+        for(let key in info) {
+           console.log(info[key])
+       }
 
-    for (let index in names) {
+    //Inserindo informações junto com outras informações em um objeto: (Uso de for in e condiciona)
 
-    console.log('Olá', names[index])
-  };
+       let info2 = {
+        personagem: 'Tio Patinhas',
+        origem: 'Christmas on Bear Mountain, Dell’s Four Color Comics #178',
+        nota: 'O último MacPatinhas',
+        recorrente: 'Sim',
+      };
 
-  let car = {
-    model: 'A3 Sedan',
-    manufacturer: 'Audi',
-    year: 2020
-  };
+        for(let propriedades in info) {
+            if(propriedades === 'recorrente' && info[propriedades] === 'sim' && info2[propriedades] === 'sim') {
 
-  for (let index in car) {
+                console.log('Ambos recorrentes');
 
-    console.log(index,car[index])
-  }
+        } else {
 
-  
+            console.log(info[propriedades] + ' e ' + info2[propriedades]);
+        }
+    }
+
+    //Exercício 2 
+
+    //Imprimir no console acessando uma posição o-do objeto que é um array.
+
+    let leitor = {
+        nome: 'Julia',
+        sobrenome: 'Pessoa',
+        idade: 21,
+        livrosFavoritos: [
+          {
+            titulo: 'O Pior Dia de Todos',
+            autor: 'Daniela Kopsch',
+            editora: 'Tordesilhas',
+          },
+        ],
+    }
+
+    console.log('O livro favorito de ' + leitor.nome + ' ' + leitor.sobrenome + ' se chama "' + leitor.livrosFavoritos[0].titulo + '"');
+
+    //Adicionar dentro do array no objeto mais um array:
+
+    leitor.livrosFavoritos.push(
+        {
+        titulo: 'Harry Potter e o Prisioneiro de Azkaban',
+        autor: 'JK Rowling',
+        editora: 'Rocco',
+      },
+      );
+
+      console.log(leitor);
+
+      // Contar quantos livros favoritos Julia tem:
+
+      console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+
+     
